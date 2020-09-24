@@ -15,6 +15,9 @@ public:
     Home(QWidget *parent = nullptr);
     ~Home();
 
+private slots:
+    void on_buttonShowDatabase_clicked();
+
 private:
     Ui::Home *ui;
 };

@@ -10,13 +10,16 @@ CONFIG += c++11
 
 SOURCES += \
     main.cpp \
-    home.cpp
+    home.cpp \
+    showdatabase.cpp
 
 HEADERS += \
-    home.h
+    home.h \
+    showdatabase.h
 
 FORMS += \
-    home.ui
+    home.ui \
+    showdatabase.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
