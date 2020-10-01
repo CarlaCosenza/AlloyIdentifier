@@ -16,7 +16,10 @@ Home::~Home()
 
 void Home::on_buttonShowDatabase_clicked()
 {
-    ShowDatabase showDatabase;
+    ShowDatabase showDatabase(this);
     showDatabase.setModal(true);
+    hide();
     showDatabase.exec();
+    show();
+
 }
