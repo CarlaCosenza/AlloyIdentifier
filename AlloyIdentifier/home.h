@@ -18,6 +18,8 @@ public:
 private slots:
     void on_buttonShowDatabase_clicked();
 
+    void on_buttonEditDatabase_clicked();
+
 private:
     Ui::Home *ui;
 };
