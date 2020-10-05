@@ -2,6 +2,7 @@
 #define ADDTODATABASE_H
 
 #include <QDialog>
+#include <QDoubleValidator>
 
 namespace Ui {
 class AddToDatabase;
@@ -20,7 +21,11 @@ private slots:
 
 private:
     Ui::AddToDatabase *ui;
+    QDoubleValidator *dblVal;
+
+    void setLineEditValidators();
     void clearAllLineEdits();
+    void createAlloy();
 };
 
 #endif // ADDTODATABASE_H

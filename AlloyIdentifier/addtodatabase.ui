@@ -67,7 +67,7 @@
      <string>Classe</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="inputName">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -77,7 +77,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QSpinBox" name="spinBox">
+   <widget class="QSpinBox" name="inputClasse">
     <property name="geometry">
      <rect>
       <x>700</x>
