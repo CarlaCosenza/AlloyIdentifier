@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="buttonShowDatabase">
+  <widget class="QPushButton" name="addToDatabase">
    <property name="geometry">
     <rect>
      <x>500</x>
@@ -140,7 +140,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Mg</string>
+         <string>Al</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_16">
@@ -169,7 +169,7 @@
          <string>Min</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_11">
+       <widget class="QLineEdit" name="alMax">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -179,7 +179,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_12">
+       <widget class="QLineEdit" name="alMin">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -189,7 +189,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_13">
+       <widget class="QLineEdit" name="alSpec">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -241,7 +241,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Mg</string>
+         <string>Mn</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_40">
@@ -270,7 +270,7 @@
          <string>Min</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_29">
+       <widget class="QLineEdit" name="mnMax">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -280,7 +280,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_30">
+       <widget class="QLineEdit" name="mnMin">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -290,7 +290,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_31">
+       <widget class="QLineEdit" name="mnSpec">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -342,7 +342,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Mg</string>
+         <string>Si</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_20">
@@ -371,7 +371,7 @@
          <string>Min</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_14">
+       <widget class="QLineEdit" name="siMax">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -381,7 +381,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_15">
+       <widget class="QLineEdit" name="siMin">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -391,7 +391,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_16">
+       <widget class="QLineEdit" name="siSpec">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -443,7 +443,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Mg</string>
+         <string>C</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_36">
@@ -472,7 +472,7 @@
          <string>Min</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_26">
+       <widget class="QLineEdit" name="cMax">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -482,7 +482,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_27">
+       <widget class="QLineEdit" name="cMin">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -492,7 +492,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_28">
+       <widget class="QLineEdit" name="cSpec">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -544,7 +544,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Mg</string>
+         <string>Cu</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_44">
@@ -573,7 +573,7 @@
          <string>Min</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_32">
+       <widget class="QLineEdit" name="cuMax">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -583,7 +583,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_33">
+       <widget class="QLineEdit" name="cuMin">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -593,7 +593,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_34">
+       <widget class="QLineEdit" name="cuSpec">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -645,7 +645,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Mg</string>
+         <string>Ti</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_12">
@@ -674,7 +674,7 @@
          <string>Min</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_8">
+       <widget class="QLineEdit" name="tiMax">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -684,7 +684,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_9">
+       <widget class="QLineEdit" name="tiMin">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -694,7 +694,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_10">
+       <widget class="QLineEdit" name="tiSpec">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -775,7 +775,7 @@
          <string>Min</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_3">
+       <widget class="QLineEdit" name="mgMax">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -785,7 +785,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_2">
+       <widget class="QLineEdit" name="mgMin">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -795,7 +795,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_4">
+       <widget class="QLineEdit" name="mgSpec">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -847,7 +847,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Mg</string>
+         <string>W</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_48">
@@ -876,7 +876,7 @@
          <string>Min</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_35">
+       <widget class="QLineEdit" name="wMax">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -886,7 +886,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_36">
+       <widget class="QLineEdit" name="wMin">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -896,7 +896,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_37">
+       <widget class="QLineEdit" name="wSpec">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -948,7 +948,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Mg</string>
+         <string>Sn</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_32">
@@ -977,7 +977,7 @@
          <string>Min</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_23">
+       <widget class="QLineEdit" name="snMax">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -987,7 +987,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_24">
+       <widget class="QLineEdit" name="snMin">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -997,7 +997,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_25">
+       <widget class="QLineEdit" name="snSpec">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1049,7 +1049,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Mg</string>
+         <string>Mo</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_28">
@@ -1078,7 +1078,7 @@
          <string>Min</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_20">
+       <widget class="QLineEdit" name="moMax">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1088,7 +1088,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_21">
+       <widget class="QLineEdit" name="moMin">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1098,7 +1098,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_22">
+       <widget class="QLineEdit" name="moSpec">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1150,7 +1150,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Mg</string>
+         <string>Pb</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_24">
@@ -1179,7 +1179,7 @@
          <string>Min</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_17">
+       <widget class="QLineEdit" name="pbMax">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1189,7 +1189,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_18">
+       <widget class="QLineEdit" name="pbMin">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1199,7 +1199,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_19">
+       <widget class="QLineEdit" name="pbSpec">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1251,7 +1251,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Mg</string>
+         <string>Zn</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_52">
@@ -1280,7 +1280,7 @@
          <string>Min</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_38">
+       <widget class="QLineEdit" name="znMax">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1290,7 +1290,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_39">
+       <widget class="QLineEdit" name="znMin">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1300,7 +1300,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_40">
+       <widget class="QLineEdit" name="znSpec">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1352,7 +1352,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Mg</string>
+         <string>Fe</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_56">
@@ -1381,7 +1381,7 @@
          <string>Min</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_41">
+       <widget class="QLineEdit" name="feMax">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1391,7 +1391,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_42">
+       <widget class="QLineEdit" name="feMin">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1401,7 +1401,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_43">
+       <widget class="QLineEdit" name="feSpec">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1453,7 +1453,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Mg</string>
+         <string>Ni</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_60">
@@ -1482,7 +1482,7 @@
          <string>Min</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_44">
+       <widget class="QLineEdit" name="niMax">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1492,7 +1492,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_45">
+       <widget class="QLineEdit" name="niMin">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1502,7 +1502,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_46">
+       <widget class="QLineEdit" name="niSpec">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1554,7 +1554,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Mg</string>
+         <string>Co</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_64">
@@ -1583,7 +1583,7 @@
          <string>Min</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_47">
+       <widget class="QLineEdit" name="coMax">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1593,7 +1593,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_48">
+       <widget class="QLineEdit" name="coMin">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1603,7 +1603,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_49">
+       <widget class="QLineEdit" name="coSpec">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1655,7 +1655,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Mg</string>
+         <string>V</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_68">
@@ -1684,7 +1684,7 @@
          <string>Min</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_50">
+       <widget class="QLineEdit" name="vMax">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1694,7 +1694,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_51">
+       <widget class="QLineEdit" name="vMin">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1704,7 +1704,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_52">
+       <widget class="QLineEdit" name="vSpec">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1756,7 +1756,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Mg</string>
+         <string>Cr</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_72">
@@ -1785,7 +1785,7 @@
          <string>Min</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_53">
+       <widget class="QLineEdit" name="crMax">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1795,7 +1795,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_54">
+       <widget class="QLineEdit" name="crMin">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -1805,7 +1805,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_55">
+       <widget class="QLineEdit" name="crSpec">
         <property name="geometry">
          <rect>
           <x>50</x>
