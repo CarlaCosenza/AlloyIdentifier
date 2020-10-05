@@ -15,8 +15,12 @@ public:
     explicit AddToDatabase(QWidget *parent = nullptr);
     ~AddToDatabase();
 
+private slots:
+    void on_addToDatabase_clicked();
+
 private:
     Ui::AddToDatabase *ui;
+    void clearAllLineEdits();
 };
 
 #endif // ADDTODATABASE_H

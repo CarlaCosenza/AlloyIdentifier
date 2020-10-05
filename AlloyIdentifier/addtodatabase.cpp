@@ -8,7 +8,18 @@ AddToDatabase::AddToDatabase(QWidget *parent) :
     ui->setupUi(this);
 }
 
-AddToDatabase::~AddToDatabase()
-{
+AddToDatabase::~AddToDatabase(){
     delete ui;
+}
+
+void AddToDatabase::clearAllLineEdits(){
+    const QList<QLineEdit*> lineEdits = this->ui->compositionFrame->findChildren<QLineEdit*>();
+    for (QLineEdit *lineEdit : lineEdits) {
+        lineEdit->clear();
+    }
+}
+
+void AddToDatabase::on_addToDatabase_clicked()
+{
+    this->clearAllLineEdits();
 }
