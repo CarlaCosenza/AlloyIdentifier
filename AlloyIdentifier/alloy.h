@@ -4,18 +4,9 @@
 #import <QString>
 #import <map>
 #import "composition.h"
+#import "enumoperator.h"
 
 using namespace std;
-
-typedef enum AlloyClass {
-    ALUMINIOS,
-    ACOS_INOX,
-    COBRE,
-    LIGAS_DE_CARBONO,
-    ACO_FERRAMENTA,
-    OUTROS,
-} AlloyClass;
-
 
 class Alloy
 {

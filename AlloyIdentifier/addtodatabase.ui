@@ -77,13 +77,13 @@
      </rect>
     </property>
    </widget>
-   <widget class="QSpinBox" name="inputClasse">
+   <widget class="QComboBox" name="classeInput">
     <property name="geometry">
      <rect>
       <x>700</x>
-      <y>21</y>
-      <width>251</width>
-      <height>31</height>
+      <y>20</y>
+      <width>231</width>
+      <height>32</height>
      </rect>
     </property>
    </widget>

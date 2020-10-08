@@ -1,4 +1,5 @@
 #include <QMessageBox>
+#include <QDebug>
 
 #include "addtodatabase.h"
 #include "ui_addtodatabase.h"
@@ -7,16 +8,18 @@ AddToDatabase::AddToDatabase(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::AddToDatabase)
 {
+    this->enumOp = EnumOperator();
+
     ui->setupUi(this);
     this->setLineEditValidators();
+    this->setUpComboBox();
 }
 
 AddToDatabase::~AddToDatabase(){
     delete ui;
 }
 
-void AddToDatabase::on_addToDatabase_clicked()
-{
+void AddToDatabase::on_addToDatabase_clicked(){
     this->createAlloy();
     this->clearAllLineEdits();
 }
@@ -29,6 +32,12 @@ void AddToDatabase::setLineEditValidators(){
     const QList<QLineEdit*> lineEdits = this->ui->compositionFrame->findChildren<QLineEdit*>();
     for (QLineEdit *lineEdit : lineEdits) {
         lineEdit->setValidator(this->dblVal);
+    }
+}
+
+void AddToDatabase::setUpComboBox(){
+    for(int i = ALUMINIOS ; i <= OUTROS ; i++){
+        this->ui->classeInput->addItem(this->enumOp.alloyClassToString(static_cast<AlloyClass>(i)));
     }
 }
 
@@ -45,6 +54,7 @@ void AddToDatabase::createAlloy(){
     const QList<QLineEdit*> lineEdits = this->ui->compositionFrame->findChildren<QLineEdit*>();
     for (QLineEdit *lineEdit : lineEdits) {
         str = lineEdit->objectName();
-        QMessageBox::warning(this, "Test", str);
+        qDebug() << "teste" << str;
+//        QMessageBox::warning(this, "Test", str);
     }
 }

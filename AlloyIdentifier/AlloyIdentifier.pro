@@ -12,6 +12,7 @@ SOURCES += \
     addtodatabase.cpp \
     alloy.cpp \
     composition.cpp \
+    enumoperator.cpp \
     main.cpp \
     home.cpp \
     showdatabase.cpp
@@ -20,6 +21,7 @@ HEADERS += \
     addtodatabase.h \
     alloy.h \
     composition.h \
+    enumoperator.h \
     home.h \
     showdatabase.h
 

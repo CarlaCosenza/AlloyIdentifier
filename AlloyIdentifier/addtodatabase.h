@@ -4,6 +4,8 @@
 #include <QDialog>
 #include <QDoubleValidator>
 
+#include "enumoperator.h"
+
 namespace Ui {
 class AddToDatabase;
 }
@@ -22,8 +24,10 @@ private slots:
 private:
     Ui::AddToDatabase *ui;
     QDoubleValidator *dblVal;
+    EnumOperator enumOp;
 
     void setLineEditValidators();
+    void setUpComboBox();
     void clearAllLineEdits();
     void createAlloy();
 };
