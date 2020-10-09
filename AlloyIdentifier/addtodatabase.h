@@ -29,6 +29,8 @@ private:
     void setLineEditValidators();
     void setUpComboBox();
     void clearAllLineEdits();
+    QString getElementFromInputName(QString inputName);
+    QString getInputTypeFromInputName(QString inputName);
     void createAlloy();
 };
 

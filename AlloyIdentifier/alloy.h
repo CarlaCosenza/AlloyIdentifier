@@ -14,10 +14,14 @@ private:
     QString name;
     AlloyClass alloyClass;
     map <Elements, Composition> elementComposition;
+    EnumOperator enumOp;
 
 public:
     Alloy(QString name, AlloyClass alloyClass);
     void addElement(Elements element, Composition composition);
+    void editComposition(Elements element, QString input, double value);
+    void printAlloy();
+    bool verifyAlloy();
 };
 
 #endif // ALLOY_H

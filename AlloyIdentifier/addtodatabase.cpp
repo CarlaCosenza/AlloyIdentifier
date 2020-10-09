@@ -3,6 +3,7 @@
 
 #include "addtodatabase.h"
 #include "ui_addtodatabase.h"
+#include "alloy.h"
 
 AddToDatabase::AddToDatabase(QWidget *parent) :
     QDialog(parent),
@@ -46,15 +47,52 @@ void AddToDatabase::clearAllLineEdits(){
     for (QLineEdit *lineEdit : lineEdits) {
         lineEdit->clear();
     }
+    this->ui->inputName->clear();
+}
+
+QString AddToDatabase::getElementFromInputName(QString inputName){
+    if(inputName.contains("Spec")){
+        inputName.chop(4);
+    }
+    else{
+        inputName.chop(3);
+    }
+    return inputName;
+}
+
+QString AddToDatabase::getInputTypeFromInputName(QString inputName){
+    if(inputName.contains("Min")){
+        return "min";
+    }
+    if(inputName.contains("Max")){
+        return "max";
+    }
+    return "spec";
 }
 
 void AddToDatabase::createAlloy(){
-    QString str = this->ui->inputName->text();
-    QMessageBox::warning(this, "Test", str);
+    QString alloyName = this->ui->inputName->text();
+    int classId = this->ui->classeInput->currentIndex();
+    AlloyClass alloyClass = static_cast<AlloyClass>(classId);
+    Alloy alloy = Alloy(alloyName, alloyClass);
+
+    QString inputName;
     const QList<QLineEdit*> lineEdits = this->ui->compositionFrame->findChildren<QLineEdit*>();
     for (QLineEdit *lineEdit : lineEdits) {
-        str = lineEdit->objectName();
-        qDebug() << "teste" << str;
-//        QMessageBox::warning(this, "Test", str);
+        inputName = lineEdit->objectName();
+        QString stringValue = lineEdit->text();
+        if(stringValue == "") continue;
+        double value = stringValue.toDouble();
+        QString inputType = this->getInputTypeFromInputName(inputName);
+        QString elementString = this->getElementFromInputName(inputName);
+        Elements element = this->enumOp.stringToElement(elementString);
+
+        alloy.editComposition(element, inputType, value);
+    }
+
+    if(!alloy.verifyAlloy()){
+        QMessageBox::warning(this, "Warning", "Incorrect alloy input");
+    } else {
+        QMessageBox::information(this, "Success!", "Alloy added with success");
     }
 }
