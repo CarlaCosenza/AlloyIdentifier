@@ -1,6 +1,7 @@
 #include "home.h"
 #include "ui_home.h"
 #include "showdatabase.h"
+#include "addtodatabase.h"
 
 Home::Home(QWidget *parent)
     : QMainWindow(parent)
@@ -21,5 +22,13 @@ void Home::on_buttonShowDatabase_clicked()
     hide();
     showDatabase.exec();
     show();
+}
 
+void Home::on_buttonEditDatabase_clicked()
+{
+    AddToDatabase addToDatabase(this);
+    addToDatabase.setModal(true);
+    hide();
+    addToDatabase.exec();
+    show();
 }

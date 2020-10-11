@@ -9,15 +9,27 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    addtodatabase.cpp \
+    alloy.cpp \
+    composition.cpp \
+    databasemanager.cpp \
+    enumoperator.cpp \
     main.cpp \
     home.cpp \
     showdatabase.cpp
 
 HEADERS += \
+    addtodatabase.h \
+    alloy.h \
+    composition.h \
+    databasemanager.h \
+    enumoperator.h \
     home.h \
-    showdatabase.h
+    showdatabase.h \
+    userData.h
 
 FORMS += \
+    addtodatabase.ui \
     home.ui \
     showdatabase.ui
 

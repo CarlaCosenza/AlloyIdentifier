@@ -70,3 +70,6 @@ Thumbs.db
 # --------
 *.dll
 *.exe
+
+# User file
+*userData.h
