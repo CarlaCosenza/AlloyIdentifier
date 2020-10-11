@@ -16,6 +16,18 @@ Alloy::Alloy(QString name, AlloyClass alloyClass){
     this->elementComposition = elementComposition;
 }
 
+QString Alloy::getName(){
+    return this->name;
+}
+
+AlloyClass Alloy::getAlloyClass(){
+    return this->alloyClass;
+}
+
+Composition Alloy::getCompositionOfElement(Elements el){
+    return this->elementComposition[el];
+}
+
 void Alloy::addElement(Elements element, Composition composition){
     this->elementComposition[element] = composition;
 }

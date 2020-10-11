@@ -18,6 +18,9 @@ private:
 
 public:
     Alloy(QString name, AlloyClass alloyClass);
+    QString getName();
+    AlloyClass getAlloyClass();
+    Composition getCompositionOfElement(Elements el);
     void addElement(Elements element, Composition composition);
     void editComposition(Elements element, QString input, double value);
     void printAlloy();

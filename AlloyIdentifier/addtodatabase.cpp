@@ -10,6 +10,7 @@ AddToDatabase::AddToDatabase(QWidget *parent) :
     ui(new Ui::AddToDatabase)
 {
     this->enumOp = EnumOperator();
+    this->databaseManager = DatabaseManager();
 
     ui->setupUi(this);
     this->setLineEditValidators();
@@ -21,7 +22,17 @@ AddToDatabase::~AddToDatabase(){
 }
 
 void AddToDatabase::on_addToDatabase_clicked(){
-    this->createAlloy();
+    Alloy alloy = this->createAlloy();
+    if(alloy.verifyAlloy() == false){
+        return this->showErrorMessage("The added alloy was malformated.");
+    }
+
+    bool addedToDatabase = this->databaseManager.writeAlloyToDatabase(alloy);
+    if(addedToDatabase == false){
+        return this->showErrorMessage("There was an error saving to the database.");
+    }
+
+    QMessageBox::information(this, "Success!", "Alloy added with success");
     this->clearAllLineEdits();
 }
 
@@ -70,7 +81,7 @@ QString AddToDatabase::getInputTypeFromInputName(QString inputName){
     return "spec";
 }
 
-void AddToDatabase::createAlloy(){
+Alloy AddToDatabase::createAlloy(){
     QString alloyName = this->ui->inputName->text();
     int classId = this->ui->classeInput->currentIndex();
     AlloyClass alloyClass = static_cast<AlloyClass>(classId);
@@ -90,9 +101,9 @@ void AddToDatabase::createAlloy(){
         alloy.editComposition(element, inputType, value);
     }
 
-    if(!alloy.verifyAlloy()){
-        QMessageBox::warning(this, "Warning", "Incorrect alloy input");
-    } else {
-        QMessageBox::information(this, "Success!", "Alloy added with success");
-    }
+    return alloy;
+}
+
+void AddToDatabase::showErrorMessage(QString message){
+    QMessageBox::warning(this, "Warning", message);
 }

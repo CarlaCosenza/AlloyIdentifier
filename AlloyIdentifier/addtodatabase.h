@@ -5,6 +5,7 @@
 #include <QDoubleValidator>
 
 #include "enumoperator.h"
+#include "databasemanager.h"
 
 namespace Ui {
 class AddToDatabase;
@@ -25,13 +26,15 @@ private:
     Ui::AddToDatabase *ui;
     QDoubleValidator *dblVal;
     EnumOperator enumOp;
+    DatabaseManager databaseManager;
 
     void setLineEditValidators();
     void setUpComboBox();
     void clearAllLineEdits();
     QString getElementFromInputName(QString inputName);
     QString getInputTypeFromInputName(QString inputName);
-    void createAlloy();
+    Alloy createAlloy();
+    void showErrorMessage(QString message);
 };
 
 #endif // ADDTODATABASE_H
