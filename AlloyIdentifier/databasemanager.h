@@ -3,6 +3,7 @@
 
 #include <QString>
 #include <QFile>
+#include <QTableWidget>
 
 #include "alloy.h"
 
@@ -12,6 +13,7 @@ class DatabaseManager
 public:
     DatabaseManager();
     bool writeAlloyToDatabase(Alloy alloy);
+    bool buildTableWithDatabase(QTableWidget* table);
 
 private:
     static const QString databaseFileName;

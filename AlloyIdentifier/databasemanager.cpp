@@ -49,3 +49,28 @@ QString DatabaseManager::parseAlloyForDatabase(Alloy alloy){
 
     return parsedAlloy;
 }
+
+bool DatabaseManager::buildTableWithDatabase(QTableWidget *table){
+    QFile file(this->databaseFileName);
+    if(!file.open(QFile::ReadOnly | QFile::Text)){
+        return false;
+    }
+    QTextStream in(&file);
+
+    int rowCount = 0;
+    while(!in.atEnd()){
+        table->setRowCount(rowCount+1);
+        auto line = in.readLine();
+        auto values = line.split(",");
+        int columnCount = values.size();
+        table->setColumnCount(columnCount);
+        for(int j = 0 ; j < columnCount ; j++){
+            table->setItem(rowCount, j, new QTableWidgetItem(values[j]));
+        }
+        rowCount++;
+    }
+
+    file.close();
+
+    return true;
+}
