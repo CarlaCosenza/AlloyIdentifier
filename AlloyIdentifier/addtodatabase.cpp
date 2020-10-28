@@ -51,6 +51,11 @@ void AddToDatabase::setUpComboBox(){
     for(int i = ALUMINIOS ; i <= OUTROS ; i++){
         this->ui->classeInput->addItem(this->enumOp.alloyClassToString(static_cast<AlloyClass>(i)));
     }
+
+    this->ui->restanteInput->addItem("Nenhum");
+    this->ui->restanteInput->addItem(this->enumOp.elementToString(static_cast<Elements>(ALUMINIUM)));
+    this->ui->restanteInput->addItem(this->enumOp.elementToString(static_cast<Elements>(IRON)));
+    this->ui->restanteInput->addItem(this->enumOp.elementToString(static_cast<Elements>(COPPER)));
 }
 
 void AddToDatabase::clearAllLineEdits(){
@@ -86,6 +91,8 @@ Alloy AddToDatabase::createAlloy(){
     int classId = this->ui->classeInput->currentIndex();
     AlloyClass alloyClass = static_cast<AlloyClass>(classId);
     Alloy alloy = Alloy(alloyName, alloyClass);
+    double totalMin = 0;
+    double totalMax = 0;
 
     QString inputName;
     const QList<QLineEdit*> lineEdits = this->ui->compositionFrame->findChildren<QLineEdit*>();
@@ -98,9 +105,21 @@ Alloy AddToDatabase::createAlloy(){
         QString elementString = this->getElementFromInputName(inputName);
         Elements element = this->enumOp.stringToElement(elementString);
 
+        if(inputType == "min") totalMin = totalMin + value;
+        if(inputType == "max") totalMax = totalMax + value;
+
         alloy.editComposition(element, inputType, value);
     }
 
+    QString restante = this->ui->restanteInput->currentText();
+    if(restante != "Nenhum"){
+        restante = restante.toLower();
+        Elements element = this->enumOp.stringToElement(restante);
+        alloy.editComposition(element, "min", 100 - totalMax);
+        alloy.editComposition(element, "max", 100 - totalMin);
+    }
+
+    alloy.fillValuesAlloy();
     return alloy;
 }
 
