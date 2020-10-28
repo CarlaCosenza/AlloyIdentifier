@@ -267,29 +267,6 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="mnSpec">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>90</y>
-          <width>81</width>
-          <height>21</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_42">
-        <property name="geometry">
-         <rect>
-          <x>140</x>
-          <y>90</y>
-          <width>58</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Spec</string>
-        </property>
-       </widget>
       </widget>
      </item>
      <item row="0" column="2">
@@ -1382,29 +1359,6 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="vSpec">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>90</y>
-          <width>81</width>
-          <height>21</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_70">
-        <property name="geometry">
-         <rect>
-          <x>140</x>
-          <y>90</y>
-          <width>58</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Spec</string>
-        </property>
-       </widget>
       </widget>
      </item>
      <item row="1" column="1">
@@ -1481,29 +1435,6 @@
           <width>81</width>
           <height>21</height>
          </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="crSpec">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>90</y>
-          <width>81</width>
-          <height>21</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_74">
-        <property name="geometry">
-         <rect>
-          <x>140</x>
-          <y>90</y>
-          <width>58</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Spec</string>
         </property>
        </widget>
       </widget>
