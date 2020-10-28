@@ -64,7 +64,31 @@ bool Alloy::verifyAlloy(){
 
         if(min == -1 and max == -1 and spec == -1) continue;
         if(min == -1 or max == -1 or spec == -1) return false;
+        if(min > max) return false;
+        if(spec > max or spec < min) return false;
     }
 
     return true;
+}
+
+void Alloy::fillValuesAlloy(){
+    for(int i = MAGNESIUM ; i <= CARBON ; i++){
+        Elements el = static_cast<Elements>(i);
+        double min = this->elementComposition[el].getMin();
+        double max = this->elementComposition[el].getMax();
+        double spec = this->elementComposition[el].getSpec();
+
+        if(min == -1 and max != -1){
+            this->elementComposition[el].updateMin(0);
+        } else if (min != -1 and max == -1) {
+            this->elementComposition[el].updateMax(100);
+        }
+
+        if(spec == -1){
+            double newValue = (this->elementComposition[el].getMin() + this->elementComposition[el].getMax())/2.0;
+            this->elementComposition[el].updateSpec(newValue);
+        }
+    }
+
+    return;
 }

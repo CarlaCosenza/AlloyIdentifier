@@ -25,6 +25,7 @@ public:
     void editComposition(Elements element, QString input, double value);
     void printAlloy();
     bool verifyAlloy();
+    void fillValuesAlloy();
 };
 
 #endif // ALLOY_H

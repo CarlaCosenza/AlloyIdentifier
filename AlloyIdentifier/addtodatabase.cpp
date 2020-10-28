@@ -101,6 +101,7 @@ Alloy AddToDatabase::createAlloy(){
         alloy.editComposition(element, inputType, value);
     }
 
+    alloy.fillValuesAlloy();
     return alloy;
 }
 
