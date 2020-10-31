@@ -2,6 +2,7 @@
 #include "ui_home.h"
 #include "showdatabase.h"
 #include "addtodatabase.h"
+#include "compare.h"
 
 Home::Home(QWidget *parent)
     : QMainWindow(parent)
@@ -30,5 +31,14 @@ void Home::on_buttonEditDatabase_clicked()
     addToDatabase.setModal(true);
     hide();
     addToDatabase.exec();
+    show();
+}
+
+void Home::on_buttonBuscaLiga_clicked()
+{
+    compare compare(this);
+    compare.setModal(true);
+    hide();
+    compare.exec();
     show();
 }

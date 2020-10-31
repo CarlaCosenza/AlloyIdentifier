@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     addtodatabase.cpp \
     alloy.cpp \
+    compare.cpp \
     composition.cpp \
     databasemanager.cpp \
     enumoperator.cpp \
@@ -21,6 +22,7 @@ SOURCES += \
 HEADERS += \
     addtodatabase.h \
     alloy.h \
+    compare.h \
     composition.h \
     databasemanager.h \
     enumoperator.h \
@@ -30,6 +32,7 @@ HEADERS += \
 
 FORMS += \
     addtodatabase.ui \
+    compare.ui \
     home.ui \
     showdatabase.ui
 

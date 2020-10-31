@@ -26,6 +26,11 @@ public:
     void printAlloy();
     bool verifyAlloy();
     void fillValuesAlloy();
+    bool isComparable(Alloy alloy);
+
+    bool operator<(const Alloy& a1) const{
+        return (this->name.size() < a1.name.size());
+    }
 };
 
 #endif // ALLOY_H
