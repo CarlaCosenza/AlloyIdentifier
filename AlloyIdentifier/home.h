@@ -20,6 +20,8 @@ private slots:
 
     void on_buttonEditDatabase_clicked();
 
+    void on_buttonBuscaLiga_clicked();
+
 private:
     Ui::Home *ui;
 };

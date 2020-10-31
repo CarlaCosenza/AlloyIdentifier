@@ -13,6 +13,15 @@ map<AlloyClass, QString> EnumOperator::alloyClassNames = {
     {OUTROS, "Outros"}
 };
 
+map<QString, AlloyClass> EnumOperator::namesAlloyClass = {
+    {"Alumínios", ALUMINIOS},
+    {"Aços inox", ACOS_INOX},
+    {"Cobre", COBRE},
+    {"Ligas de carbono", LIGAS_DE_CARBONO},
+    {"Aço ferramenta", ACO_FERRAMENTA},
+    {"Outros", OUTROS}
+};
+
 map<Elements, QString> EnumOperator::elementNames = {
     {MAGNESIUM, "Mg"},
     {ALUMINIUM, "Al"},
@@ -55,6 +64,10 @@ map<QString, Elements> EnumOperator::namesElements = {
 
 QString EnumOperator::alloyClassToString(AlloyClass alloyClass){
     return this->alloyClassNames[alloyClass];
+}
+
+AlloyClass EnumOperator::stringToAlloyClass(QString alloyClassString){
+    return this->namesAlloyClass[alloyClassString];
 }
 
 QString EnumOperator::elementToString(Elements element){

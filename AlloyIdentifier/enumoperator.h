@@ -40,11 +40,13 @@ class EnumOperator
 {
 public:
     static map<AlloyClass, QString> alloyClassNames;
+    static map<QString, AlloyClass> namesAlloyClass;
     static map<Elements, QString> elementNames;
     static map<QString, Elements> namesElements;
 
     EnumOperator();
     QString alloyClassToString(AlloyClass alloyClass);
+    AlloyClass stringToAlloyClass(QString alloyClassString);
     QString elementToString(Elements element);
     Elements stringToElement(QString elementString);
 };

@@ -92,3 +92,16 @@ void Alloy::fillValuesAlloy(){
 
     return;
 }
+
+bool Alloy::isComparable(Alloy alloy){
+    if(this->alloyClass != alloy.getAlloyClass()) return false;
+
+    for(int i = MAGNESIUM ; i <= CARBON ; i++){
+        Elements el = static_cast<Elements>(i);
+        if(this->elementComposition[el].getSpec()*alloy.getCompositionOfElement(el).getSpec() < 0) return false;
+        if(this->elementComposition[el].getMin() > alloy.getCompositionOfElement(el).getSpec()) return false;
+        if(this->elementComposition[el].getMax() < alloy.getCompositionOfElement(el).getSpec()) return false;
+    }
+
+    return true;
+}
