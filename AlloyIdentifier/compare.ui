@@ -330,7 +330,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Compara liga</string>
+    <string>Comparar liga</string>
    </property>
   </widget>
   <widget class="QTableWidget" name="table">

@@ -99,8 +99,8 @@ bool Alloy::isComparable(Alloy alloy){
     for(int i = MAGNESIUM ; i <= CARBON ; i++){
         Elements el = static_cast<Elements>(i);
         if(this->elementComposition[el].getSpec()*alloy.getCompositionOfElement(el).getSpec() < 0) return false;
-        if(this->elementComposition[el].getMin() > alloy.getCompositionOfElement(el).getSpec()) return false;
-        if(this->elementComposition[el].getMax() < alloy.getCompositionOfElement(el).getSpec()) return false;
+        if(this->elementComposition[el].getMin() - 0.25 > alloy.getCompositionOfElement(el).getSpec()) return false;
+        if(this->elementComposition[el].getMax() + 0.25 < alloy.getCompositionOfElement(el).getSpec()) return false;
     }
 
     return true;

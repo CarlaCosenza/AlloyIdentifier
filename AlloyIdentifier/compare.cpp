@@ -88,6 +88,17 @@ Alloy compare::createAlloy(){
 
 void compare::printResultTable(priority_queue< pair <double, Alloy> > queue){
 
+    if(queue.empty()){
+        this->ui->table->setRowCount(1);
+        this->ui->table->setColumnCount(1);
+        this->ui->table->setItem(0, 0, new QTableWidgetItem("Não encontrado"));
+
+        return;
+    }
+
+    QStringList headers = this->createHeader();
+    this->ui->table->setHorizontalHeaderLabels(headers);
+
     int rowCount = 0;
 
     while(!queue.empty() and rowCount < 6){
@@ -106,4 +117,19 @@ void compare::printResultTable(priority_queue< pair <double, Alloy> > queue){
         }
         rowCount++;
     }
+}
+
+QStringList compare::createHeader(){
+    QStringList headers;
+    headers << "Nome" << "Classe";
+    for(int i = MAGNESIUM ; i <= CARBON ; i++){
+        Elements el = static_cast<Elements>(i);
+        QString elementName = enumOp.elementToString(el);
+        QString min = elementName + " min";
+        QString max = elementName + " max";
+        QString spec = elementName + " spec";
+        headers << min << max << spec;
+    }
+
+    return headers;
 }
