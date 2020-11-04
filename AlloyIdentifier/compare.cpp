@@ -96,9 +96,6 @@ void compare::printResultTable(priority_queue< pair <double, Alloy> > queue){
         return;
     }
 
-    QStringList headers = this->createHeader();
-    this->ui->table->setHorizontalHeaderLabels(headers);
-
     int rowCount = 0;
 
     while(!queue.empty() and rowCount < 6){
@@ -114,10 +111,19 @@ void compare::printResultTable(priority_queue< pair <double, Alloy> > queue){
         this->ui->table->setColumnCount(columnCount - 1);
         this->ui->table->setItem(rowCount, 0, new QTableWidgetItem(values[0]));
         for(int j = 2 ; j < columnCount+1 ; j++){
-            this->ui->table->setItem(rowCount, j-1, new QTableWidgetItem(values[j]));
+            if(values[j] == "-1"){
+                this->ui->table->setItem(rowCount, j-1, new QTableWidgetItem("0"));
+            }
+            else this->ui->table->setItem(rowCount, j-1, new QTableWidgetItem(values[j]));
         }
         rowCount++;
     }
+
+    this->ui->table->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    this->ui->table->verticalHeader()->setVisible(false);
+
+    QStringList headers = this->createHeader();
+    this->ui->table->setHorizontalHeaderLabels(headers);
 }
 
 QStringList compare::createHeader(){
