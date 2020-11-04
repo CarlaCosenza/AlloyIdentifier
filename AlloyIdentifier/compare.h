@@ -34,6 +34,7 @@ private:
     QString getElementFromInputName(QString inputName);
     QString getInputTypeFromInputName(QString inputName);
     void printResultTable(priority_queue< pair <double, Alloy> > queue);
+    QStringList createHeader();
 };
 
 #endif // COMPARE_H
