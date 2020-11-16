@@ -39,6 +39,7 @@ void compare::setUpComboBox(){
 
 void compare::on_compareAlloy_clicked(){
     Alloy alloy = this->createAlloy();
+    alloy.printAlloy();
     priority_queue< pair<double, Alloy> > queue = this->databaseManager.compareAlloyWithDatabase(alloy);
 
     this->printResultTable(queue);
@@ -110,7 +111,7 @@ void compare::printResultTable(priority_queue< pair <double, Alloy> > queue){
         this->ui->table->setRowCount(rowCount+1);
         this->ui->table->setColumnCount(columnCount - 1);
         this->ui->table->setItem(rowCount, 0, new QTableWidgetItem(values[0]));
-        for(int j = 2 ; j < columnCount+1 ; j++){
+        for(int j = 2 ; j < columnCount ; j++){
             if(values[j] == "-1"){
                 this->ui->table->setItem(rowCount, j-1, new QTableWidgetItem("0"));
             }

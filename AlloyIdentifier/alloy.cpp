@@ -94,13 +94,28 @@ void Alloy::fillValuesAlloy(){
 }
 
 bool Alloy::isComparable(Alloy alloy){
-    if(this->alloyClass != alloy.getAlloyClass() and alloy.getAlloyClass() != ANY) return false;
+    qDebug() << "Testando alloy " << this->getName() << endl;
+    if(alloy.getAlloyClass() != ANY) {
+        if(this->alloyClass != alloy.getAlloyClass()) {
+            qDebug() << "Nao funcionou por causa dal classe" << endl;
+            return false;
+        }
+    }
 
     for(int i = MAGNESIUM ; i <= CARBON ; i++){
         Elements el = static_cast<Elements>(i);
-        if(this->elementComposition[el].getSpec()*alloy.getCompositionOfElement(el).getSpec() < 0) return false;
-        if(this->elementComposition[el].getMin() - 0.25 > alloy.getCompositionOfElement(el).getSpec()) return false;
-        if(this->elementComposition[el].getMax() + 0.25 < alloy.getCompositionOfElement(el).getSpec()) return false;
+        if(this->elementComposition[el].getSpec()*alloy.getCompositionOfElement(el).getSpec() < 0){
+            qDebug() << "Elemento " << this->enumOp.elementToString(el) << " nao compativel" << endl;
+            return false;
+        }
+        if(this->elementComposition[el].getMin() - 0.35 > alloy.getCompositionOfElement(el).getSpec()){
+            qDebug() << this->enumOp.elementToString(el) << " min maior" << endl;
+            return false;
+        }
+        if(this->elementComposition[el].getMax() + 0.35 < alloy.getCompositionOfElement(el).getSpec()) {
+            qDebug() << this->enumOp.elementToString(el) << " max menor" << endl;
+            return false;
+        }
     }
 
     return true;

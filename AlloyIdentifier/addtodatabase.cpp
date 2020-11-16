@@ -88,7 +88,7 @@ QString AddToDatabase::getInputTypeFromInputName(QString inputName){
 
 Alloy AddToDatabase::createAlloy(){
     QString alloyName = this->ui->inputName->text();
-    int classId = this->ui->classeInput->currentIndex();
+    int classId = this->ui->classeInput->currentIndex() + 1;
     AlloyClass alloyClass = static_cast<AlloyClass>(classId);
     Alloy alloy = Alloy(alloyName, alloyClass);
     double totalMin = 0;

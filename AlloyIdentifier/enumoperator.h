@@ -28,7 +28,7 @@ typedef enum Elements {
 } Elements;
 
 typedef enum AlloyClass {
-    ANY = -1,
+    ANY,
     ALUMINIOS,
     ACOS_INOX,
     COBRE,
