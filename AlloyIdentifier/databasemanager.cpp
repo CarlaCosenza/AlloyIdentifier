@@ -64,8 +64,6 @@ bool DatabaseManager::buildTableWithDatabase(QTableWidget *table){
         auto values = line.split(",");
         int columnCount = values.size();
 
-        qDebug() << values << endl;
-
         table->setColumnCount(columnCount);
         for(int j = 0 ; j < columnCount ; j++){
             table->setItem(rowCount, j, new QTableWidgetItem(values[j]));
