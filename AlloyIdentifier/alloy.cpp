@@ -94,7 +94,7 @@ void Alloy::fillValuesAlloy(){
 }
 
 bool Alloy::isComparable(Alloy alloy){
-    if(this->alloyClass != alloy.getAlloyClass()) return false;
+    if(this->alloyClass != alloy.getAlloyClass() and alloy.getAlloyClass() != ANY) return false;
 
     for(int i = MAGNESIUM ; i <= CARBON ; i++){
         Elements el = static_cast<Elements>(i);

@@ -32,7 +32,7 @@ void compare::setLineEditValidators(){
 
 
 void compare::setUpComboBox(){
-    for(int i = ALUMINIOS ; i <= OUTROS ; i++){
+    for(int i = ANY ; i <= OUTROS ; i++){
         this->ui->classeInput->addItem(this->enumOp.alloyClassToString(static_cast<AlloyClass>(i)));
     }
 }

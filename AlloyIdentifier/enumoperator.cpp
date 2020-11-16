@@ -5,6 +5,7 @@ using namespace std;
 EnumOperator::EnumOperator(){}
 
 map<AlloyClass, QString> EnumOperator::alloyClassNames = {
+    {ANY, "Qualquer"},
     {ALUMINIOS, "Alumínios"},
     {ACOS_INOX, "Aços inox"},
     {COBRE, "Cobre"},
@@ -14,6 +15,7 @@ map<AlloyClass, QString> EnumOperator::alloyClassNames = {
 };
 
 map<QString, AlloyClass> EnumOperator::namesAlloyClass = {
+    {"Qualquer", ANY},
     {"Alumínios", ALUMINIOS},
     {"Aços inox", ACOS_INOX},
     {"Cobre", COBRE},
