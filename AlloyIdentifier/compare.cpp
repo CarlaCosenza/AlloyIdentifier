@@ -32,7 +32,7 @@ void compare::setLineEditValidators(){
 
 
 void compare::setUpComboBox(){
-    for(int i = ALUMINIOS ; i <= OUTROS ; i++){
+    for(int i = ANY ; i <= OUTROS ; i++){
         this->ui->classeInput->addItem(this->enumOp.alloyClassToString(static_cast<AlloyClass>(i)));
     }
 }
@@ -111,9 +111,10 @@ void compare::printResultTable(priority_queue< pair <double, Alloy> > queue){
 
         int columnCount = values.size();
         this->ui->table->setRowCount(rowCount+1);
-        this->ui->table->setColumnCount(columnCount);
-        for(int j = 0 ; j < columnCount ; j++){
-            this->ui->table->setItem(rowCount, j, new QTableWidgetItem(values[j]));
+        this->ui->table->setColumnCount(columnCount - 1);
+        this->ui->table->setItem(rowCount, 0, new QTableWidgetItem(values[0]));
+        for(int j = 2 ; j < columnCount+1 ; j++){
+            this->ui->table->setItem(rowCount, j-1, new QTableWidgetItem(values[j]));
         }
         rowCount++;
     }
@@ -121,7 +122,7 @@ void compare::printResultTable(priority_queue< pair <double, Alloy> > queue){
 
 QStringList compare::createHeader(){
     QStringList headers;
-    headers << "Nome" << "Classe";
+    headers << "Nome";
     for(int i = MAGNESIUM ; i <= CARBON ; i++){
         Elements el = static_cast<Elements>(i);
         QString elementName = enumOp.elementToString(el);
